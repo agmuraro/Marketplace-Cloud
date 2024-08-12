@@ -23,6 +23,15 @@ export class ProductRepository{
         })
     }
 
+    async updateProduct(body: any){
+        return await this.prisma.product.update({
+            where: {
+                id: body.id
+            },
+            data: body
+        })
+    }
+
 }
 
 

@@ -16,4 +16,8 @@ export class ProductService {
     async findProduct(id: string){
         return await this.repository.findProduct(id)
     }
+
+    async updateProduct(body: any){
+        return await this.repository.updateProduct(body)
+    }
 }
