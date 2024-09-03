@@ -32,6 +32,14 @@ export class ProductRepository{
         })
     }
 
+    async deleteProduct(body: any){
+        return await this.prisma.product.delete({
+            where: {
+                id: body.id
+            }
+        })
+    }
+
 }
 
 

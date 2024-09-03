@@ -20,4 +20,8 @@ export class ProductService {
     async updateProduct(body: any){
         return await this.repository.updateProduct(body)
     }
+
+    async deleteProduct(body: any){
+        return await this.repository.deleteProduct(body)
+    }
 }
